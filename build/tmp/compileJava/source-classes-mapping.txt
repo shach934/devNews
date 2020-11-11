@@ -1,0 +1,4 @@
+se/sda/backend/devNews/DevNewsApplication.java
+ se.sda.backend.devNews.DevNewsApplication
+se/sda/backend/devNews/hellop.java
+ se.sda.backend.devNews.hellop
