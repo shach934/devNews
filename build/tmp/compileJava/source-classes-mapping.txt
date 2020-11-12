@@ -1,4 +1,10 @@
 se/sda/backend/devNews/DevNewsApplication.java
  se.sda.backend.devNews.DevNewsApplication
-se/sda/backend/devNews/hellop.java
- se.sda.backend.devNews.hellop
+se/sda/backend/devNews/Article/ArticleController.java
+ se.sda.backend.devNews.Article.ArticleController
+se/sda/backend/devNews/Article/ArticleService.java
+ se.sda.backend.devNews.Article.ArticleService
+se/sda/backend/devNews/Article/Article.java
+ se.sda.backend.devNews.Article.Article
+se/sda/backend/devNews/Article/ArticleRepo.java
+ se.sda.backend.devNews.Article.ArticleRepo

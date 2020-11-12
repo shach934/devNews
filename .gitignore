@@ -1,5 +1,5 @@
 # Compiled class file
-*.class
+*.clas
 
 # Log file
 *.log
@@ -21,3 +21,24 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+.gradle/*
+.gradle/buildOutputCleanup/buildOutputCleanup.lock
+.gradle/6.6.1/javaCompile/javaCompile.lock
+.gradle/6.6.1/javaCompile/classAnalysis.bin
+.gradle/6.6.1/fileHashes/fileHashes.lock
+.gradle/6.6.1/fileHashes/fileHashes.bin
+.gradle/6.6.1/executionHistory/executionHistory.lock
+.gradle/6.6.1/executionHistory/executionHistory.bin
+.gradle/buildOutputCleanup/buildOutputCleanup.lock
+.gradle/6.6.1/javaCompile/javaCompile.lock
+.gradle/6.6.1/javaCompile/classAnalysis.bin
+.gradle/6.6.1/fileHashes/fileHashes.lock
+.gradle/6.6.1/fileHashes/fileHashes.bin
+.gradle/6.6.1/executionHistory/executionHistory.lock
+.gradle/6.6.1/executionHistory/executionHistory.bin
+*.xml
+*.bin
+*.lock
+*.class
+*.bin
+*.lock
