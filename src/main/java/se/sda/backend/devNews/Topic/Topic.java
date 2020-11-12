@@ -1,9 +1,9 @@
 package se.sda.backend.devNews.Topic;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import se.sda.backend.devNews.Article.Article;
+
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Topic {
@@ -11,7 +11,11 @@ public class Topic {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @OneToMany
+    private List<Article> articleList;
+
     private String name;
+
     public Topic(){}
 
     public Topic(Long id, String name) {

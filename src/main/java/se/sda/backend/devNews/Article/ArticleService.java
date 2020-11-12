@@ -30,4 +30,9 @@ public class ArticleService {
     public void delete(Long id){
         repo.deleteById(id);
     }
+
+    // return all the articles with certain topic id
+    public List<Article> getAllArticleByTopic(Long topicId) {
+        return repo.findAllByTopicId(topicId);
+    }
 }

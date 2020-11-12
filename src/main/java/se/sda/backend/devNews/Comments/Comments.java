@@ -1,9 +1,8 @@
 package se.sda.backend.devNews.Comments;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import se.sda.backend.devNews.Article.Article;
+
+import javax.persistence.*;
 
 @Entity
 public class Comments {
@@ -11,11 +10,18 @@ public class Comments {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(columnDefinition = "TEXT")
     private String content;
 
-    public Comments(Long id, String content) {
+    @ManyToOne
+    private Article article;
+
+    private String author;
+
+    public Comments(Long id, String content, String name) {
         this.id = id;
         this.content = content;
+        this.author = name;
     }
 
     public Comments() { }
@@ -34,5 +40,13 @@ public class Comments {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 }

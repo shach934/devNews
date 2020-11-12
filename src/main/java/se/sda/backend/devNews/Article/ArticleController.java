@@ -21,9 +21,14 @@ public class ArticleController {
         return "Welcome!";
     }
 
+    // add the annotation to enable ?topicId=XX syntax.
     @GetMapping("/articles")
-    public List<Article> getAll(){
-        return articleService.getAll();
+    public List<Article> getAll(@RequestParam(required = false) Long topicId){
+        if(topicId == null){
+            return articleService.getAll();
+        }else{
+            return articleService.getAllArticleByTopic(topicId);
+        }
     }
 
     @GetMapping("/articles/{id}")
