@@ -2,8 +2,6 @@ package se.sda.backend.devNews.Topic;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import se.sda.backend.devNews.Article.Article;
-import se.sda.backend.devNews.Article.ArticleRepo;
 
 import java.util.List;
 import java.util.Optional;

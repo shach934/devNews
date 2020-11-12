@@ -1,6 +1,6 @@
 package se.sda.backend.devNews.Comments;
 
-import se.sda.backend.devNews.Article.Article;
+import se.sda.backend.devNews.articles.Article;
 
 import javax.persistence.*;
 

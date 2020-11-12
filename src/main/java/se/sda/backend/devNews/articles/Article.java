@@ -1,4 +1,4 @@
-package se.sda.backend.devNews.Article;
+package se.sda.backend.devNews.articles;
 
 import se.sda.backend.devNews.Comments.Comments;
 import se.sda.backend.devNews.Topic.Topic;
@@ -8,7 +8,7 @@ import java.util.List;
 
 // to make a class into database, using Entity and assign Id annotation will do.
 @Entity
-@Table(name = "Posts") // explicitly define the database name, otherwise same as the class name.
+// @Table(name = "Posts") // explicitly define the database name, otherwise same as the class name.
 // By explicitly give the table/column names, the database is independent of the code, though may cause confusion.
 
 public class Article {
@@ -21,7 +21,7 @@ public class Article {
     private String title;
     // by columnDefiniation to TEXT, not limite to char 255 as in Java,
     // name = "Post", change this column name in database to Post, by default this column is same as the varible.
-    @Column(columnDefinition = "TEXT", name="Post")
+    @Column(columnDefinition = "TEXT")
     private String body;
     private String author;
 
