@@ -14,13 +14,13 @@ se/sda/backend/devNews/Comments/Comments.java
  se.sda.backend.devNews.Comments.Comments
 se/sda/backend/devNews/Comments/CommentsController.java
  se.sda.backend.devNews.Comments.CommentsController
-se/sda/backend/devNews/articles/ArticleController.java
- se.sda.backend.devNews.articles.ArticleController
 se/sda/backend/devNews/articles/ArticleService.java
  se.sda.backend.devNews.articles.ArticleService
-se/sda/backend/devNews/articles/ArticleRepo.java
- se.sda.backend.devNews.articles.ArticleRepo
 se/sda/backend/devNews/Topic/TopicService.java
  se.sda.backend.devNews.Topic.TopicService
 se/sda/backend/devNews/Topic/TopicController.java
  se.sda.backend.devNews.Topic.TopicController
+se/sda/backend/devNews/articles/ArticleRepo.java
+ se.sda.backend.devNews.articles.ArticleRepo
+se/sda/backend/devNews/articles/ArticleController.java
+ se.sda.backend.devNews.articles.ArticleController

@@ -31,7 +31,7 @@ public class ArticleController {
     }
 
     @GetMapping("/articles/{id}")
-    public Article getById(Long id){
+    public Article getById(@PathVariable Long id){
         return articleService.getById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }

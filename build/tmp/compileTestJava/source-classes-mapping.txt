@@ -2,3 +2,5 @@ se/sda/backend/devNews/DevNewsApplicationTests.java
  se.sda.backend.devNews.DevNewsApplicationTests
 se/sda/backend/devNews/articles/ArticleControllerTest.java
  se.sda.backend.devNews.articles.ArticleControllerTest
+se/sda/backend/devNews/articles/ArticleRestTest.java
+ se.sda.backend.devNews.articles.ArticleRestTest
