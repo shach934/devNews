@@ -1,10 +1,18 @@
 se/sda/backend/devNews/DevNewsApplication.java
  se.sda.backend.devNews.DevNewsApplication
+se/sda/backend/devNews/Article/ArticleRepo.java
+ se.sda.backend.devNews.Article.ArticleRepo
 se/sda/backend/devNews/Article/ArticleController.java
  se.sda.backend.devNews.Article.ArticleController
 se/sda/backend/devNews/Article/ArticleService.java
  se.sda.backend.devNews.Article.ArticleService
+se/sda/backend/devNews/Topic/Topic.java
+ se.sda.backend.devNews.Topic.Topic
 se/sda/backend/devNews/Article/Article.java
  se.sda.backend.devNews.Article.Article
-se/sda/backend/devNews/Article/ArticleRepo.java
- se.sda.backend.devNews.Article.ArticleRepo
+se/sda/backend/devNews/Topic/TopicRepo.java
+ se.sda.backend.devNews.Topic.TopicRepo
+se/sda/backend/devNews/Topic/TopicService.java
+ se.sda.backend.devNews.Topic.TopicService
+se/sda/backend/devNews/Topic/TopicController.java
+ se.sda.backend.devNews.Topic.TopicController
