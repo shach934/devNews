@@ -26,6 +26,14 @@ public class Comments {
 
     public Comments() { }
 
+    public Article getArticle() {
+        return article;
+    }
+
+    public void setArticle(Article article) {
+        this.article = article;
+    }
+
     public Long getId() {
         return id;
     }

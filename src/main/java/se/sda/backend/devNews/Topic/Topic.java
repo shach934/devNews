@@ -11,8 +11,8 @@ public class Topic {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany
-    private List<Article> articleList;
+    @ManyToMany(mappedBy = "topics")
+    private List<Article> articles;
 
     private String name;
 
@@ -21,6 +21,18 @@ public class Topic {
     public Topic(Long id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public List<Article> getArticles() {
+        return articles;
+    }
+
+    public void setArticles(List<Article> articles) {
+        this.articles = articles;
     }
 
     public Long getId() {

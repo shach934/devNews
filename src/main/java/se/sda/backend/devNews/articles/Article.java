@@ -17,16 +17,16 @@ public class Article {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
     private String title;
-    // by columnDefiniation to TEXT, not limite to char 255 as in Java,
-    // name = "Post", change this column name in database to Post, by default this column is same as the varible.
+
+    // by columnDefinition to TEXT, not limit to char 255 as in Java,
+    // by default the name column name is variable name, can explicitly assign by: name = "Post".
     @Column(columnDefinition = "TEXT")
     private String body;
     private String author;
 
-    @ManyToOne
-    private Topic topic;
+    @ManyToMany
+    private List<Topic> topics;
 
     @OneToMany
     private List<Comments> commentsList;
@@ -38,6 +38,22 @@ public class Article {
         this.title = title;
         this.body = body;
         this.author = author;
+    }
+
+    public List<Topic> getTopics() {
+        return topics;
+    }
+
+    public void setTopics(List<Topic> topics) {
+        this.topics = topics;
+    }
+
+    public List<Comments> getCommentsList() {
+        return commentsList;
+    }
+
+    public void setCommentsList(List<Comments> commentsList) {
+        this.commentsList = commentsList;
     }
 
     public Long getId() {

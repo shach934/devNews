@@ -2,6 +2,7 @@ package se.sda.backend.devNews.Comments;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
@@ -17,19 +18,13 @@ public class CommentsService {
         return repo.findAll();
     }
 
-    public Optional<Comments> getById(Long id){
-        return repo.findById(id);
-    }
+    public Optional<Comments> getById(Long id){  return repo.findById(id); }
 
-    public Comments put(@RequestBody Comments comments){
-        return repo.save(comments);
-    }
+    public Comments create(Comments comments){  return repo.save(comments); }
 
-    public Comments update(@RequestBody Comments revisedComments){
-        return repo.save(revisedComments);
-    }
+    public Comments update(Comments revisedComments){  return repo.save(revisedComments); }
 
-    public void delete(Long id){
-        repo.deleteById(id);
-    }
+    public void delete(Long id){ repo.deleteById(id); }
+
+    public List<Comments> findAllByArticleId(Long articleId) { return repo.findAllByArticleId(articleId);}
 }

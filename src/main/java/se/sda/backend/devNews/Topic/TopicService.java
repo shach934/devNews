@@ -13,9 +13,7 @@ public class TopicService {
 
     public List<Topic> getAll() {  return repo.findAll(); }
 
-    public Optional<Topic> getById(Long Id){
-        return repo.findById(Id);
-    }
+    public List<Topic> getByArticleId(Long articleId){return repo.findAllByArticles_id(articleId);}
 
     public Topic create(Topic topic) {
         return repo.save(topic);

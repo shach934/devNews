@@ -9,27 +9,33 @@ import java.util.List;
 
 @RestController
 public class ArticleController {
-    //Autowired will automatically create a service class that is annotated as service.
+    // Autowired will automatically create a service class that is annotated as service.
     // this is called dependency injection. all the dependency is connected by annotations.
     // here is field injection, also others like parameter injection is possible.
     @Autowired
     private ArticleService articleService;
 
+    /*
     @GetMapping("/")
     public String WelcomPage(){
         return "Welcome!";
     }
+    */
 
-    // add the annotation to enable ?topicId=XX syntax.
+    // possibly add the annotation to enable ?topicId=XX syntax.
     @GetMapping("/articles")
-    public List<Article> getAll(@RequestParam(required = false) Long topicId){
-        if(topicId == null){
+    public List<Article> getAll(@RequestParam(required = false) Long topicId, @RequestParam(required = false) String author){
+        if(topicId != null){
+            return articleService.getAllArticlesByTopic(topicId);
+        }else if(author != null){
+            return articleService.getAllArticlesByAuthor(author);
+        }
+        else{
             return articleService.getAll();
-        }else{
-            return articleService.getAllArticleByTopic(topicId);
         }
     }
 
+    // throw the HTTP status when the specified id not found.
     @GetMapping("/articles/{id}")
     public Article getById(@PathVariable Long id){
         return articleService.getById(id)
@@ -46,8 +52,8 @@ public class ArticleController {
         return articleService.update(article);
     }
 
-    @DeleteMapping("/articles")
-    public void delete(Long id){
+    @DeleteMapping("/articles/{id}")
+    public void delete(@PathVariable Long id){
         articleService.delete(id);
     }
 }

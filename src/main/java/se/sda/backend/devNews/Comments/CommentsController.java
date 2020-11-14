@@ -11,31 +11,29 @@ import java.util.concurrent.CompletionException;
 @RestController
 public class CommentsController {
     @Autowired
-    private CommentsService service;
+    private CommentsService commentsService;
 
     @GetMapping("/comments")
-    public List<Comments> getAll(){
-        return service.getAll();
-    }
-
-    @GetMapping("/comments/{id}")
-    public Comments getById(Long id){
-        return service.getById(id)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
-    }
-
-    @PutMapping("/comments")
-    public Comments put(@RequestBody Comments comments){
-        return service.put(comments);
+    public List<Comments> getById(@RequestParam(required = false) Long articleId){
+        if(articleId != null){
+            return commentsService.findAllByArticleId(articleId);
+        }else{
+            return commentsService.getAll();
+        }
     }
 
     @PostMapping("/comments")
-    public Comments update(@RequestBody Comments revisedComments){
-        return service.update(revisedComments);
+    public Comments create(@RequestBody Comments comments){
+        return commentsService.create(comments);
     }
 
-    @DeleteMapping("/comments")
-    public void delete(Long id){
-        service.delete(id);
+    @PutMapping("/comments")
+    public Comments update(@RequestBody Comments revisedComments){
+        return commentsService.update(revisedComments);
+    }
+
+    @DeleteMapping("/comments/{id}")
+    public void delete(@PathVariable Long id){
+        commentsService.delete(id);
     }
 }

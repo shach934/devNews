@@ -14,24 +14,22 @@ public class ArticleService {
 
     public List<Article> getAll() {  return repo.findAll(); }
 
-    public Optional<Article> getById(Long Id){
-        return repo.findById(Id);
-    }
+    public Optional<Article> getById(Long Id){   return repo.findById(Id); }
 
     public Article create(Article article) {
         return repo.save(article);
     }
 
-    public Article update(Article revicedArticle){
-        return repo.save(revicedArticle);
+    public Article update(Article revisedArticle){
+        return repo.save(revisedArticle);
     }
 
-    public void delete(Long id){
-        repo.deleteById(id);
-    }
+    public void delete(Long id){ repo.deleteById(id); }
 
     // return all the articles with certain topic id
-    public List<Article> getAllArticleByTopic(Long topicId) {
-        return repo.findAllByTopicId(topicId);
+    public List<Article> getAllArticlesByTopic(Long topicId) {
+        return repo.findAllByTopics_id(topicId);
     }
+
+    public List<Article> getAllArticlesByAuthor(String author){ return repo.findAllByAuthorContaining(author); }
 }
