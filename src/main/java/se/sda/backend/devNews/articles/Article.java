@@ -48,14 +48,6 @@ public class Article {
         this.topics = topics;
     }
 
-    public List<Comments> getCommentsList() {
-        return commentsList;
-    }
-
-    public void setCommentsList(List<Comments> commentsList) {
-        this.commentsList = commentsList;
-    }
-
     public Long getId() {
         return id;
     }

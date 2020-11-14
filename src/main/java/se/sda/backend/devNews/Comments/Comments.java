@@ -26,14 +26,6 @@ public class Comments {
 
     public Comments() { }
 
-    public Article getArticle() {
-        return article;
-    }
-
-    public void setArticle(Article article) {
-        this.article = article;
-    }
-
     public Long getId() {
         return id;
     }
@@ -56,5 +48,13 @@ public class Comments {
 
     public void setAuthor(String author) {
         this.author = author;
+    }
+
+    public Article getArticle() {
+        return article;
+    }
+
+    public void setArticle(Article article) {
+        this.article = article;
     }
 }

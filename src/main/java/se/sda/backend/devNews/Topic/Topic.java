@@ -27,14 +27,6 @@ public class Topic {
         this.id = id;
     }
 
-    public List<Article> getArticles() {
-        return articles;
-    }
-
-    public void setArticles(List<Article> articles) {
-        this.articles = articles;
-    }
-
     public Long getId() {
         return id;
     }
