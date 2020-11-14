@@ -96,6 +96,5 @@ public class ArticleRestTest {
 
         //clean
         testRestTemplate.delete("/articles/" + articleSample.getId().toString());
-
     }
 }

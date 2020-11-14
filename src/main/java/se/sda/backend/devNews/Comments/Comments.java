@@ -6,6 +6,9 @@ import javax.persistence.*;
 
 @Entity
 public class Comments {
+
+    // comments for the post, it has a field of article
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
