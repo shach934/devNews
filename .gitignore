@@ -58,3 +58,4 @@ hs_err_pid*
 .gradle/6.6.1/javaCompile/classAnalysis.bin
 .gradle/6.6.1/javaCompile/javaCompile.lock
 .gradle/buildOutputCleanup/buildOutputCleanup.lock
+.DS_Store
